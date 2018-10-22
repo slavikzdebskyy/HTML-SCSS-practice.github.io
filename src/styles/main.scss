@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
+@import './variatables';
+@import './mixins';
+@import './reset';
+@import './layouts';
+
+
+
+header {
+  width: 100%;
+  height: 45px;
+  background-color: map-get($colors-background, header-bg);
+  @extend %flex-row-center-center;
+  justify-content: space-between;
+  border-radius: 5px 5px 0 0;
+  color: map-get($colors-text, header-txt);
+  span {
+    font-size: 12px;    
+  }// span
+  .logo {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: map-get($colors-marks, logo-red);
+    border-radius: 50%;
+    box-shadow: 14px 0 0 0 map-get($colors-marks, logo-yellow);;
+    margin: 0 35px 0 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      box-shadow: 28px 0 0 0 map-get($colors-marks, logo-green);;
+    }// .logo::after  
+  }// .logo
+  ul {    
+    @extend %flex-row-center-center;
+    li {
+      font-size: 13px;
+      .circle {
+        width: 4px;
+        height: 4px;
+        background-color: map-get($colors-background, li-bg);
+        border-radius: 50%;
+        margin: 0 10px 0;
+      }// .circle
+      .user-account {
+        width: 158px;
+        height: 45px;
+        background-color: map-get($colors-background, user-acc);
+        color: map-get($colors-text, col-white);
+        font-size: 13px;
+        border-radius: 0 5px 0 0;
+        margin-left: 10px;
+        @extend %flex-row-center-center;
+        img {
+          width: 31px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: contain;
+        }// img
+          span {
+          margin: 0 11px 0;
+          }//  span
+      }// li.user-account
+    }// li
+  }// ul
+}// header
+
+.sidebar-item {
+  background-color: map-get($colors-background, side-bar-item);
+  @include flex(column, center, start);
+  margin-bottom: 4px; 
+  ul {
+    li {
+      @extend %flex-row-center-center;
+      justify-content: flex-start;
+      width: $sideBarWidth;
+      height: 38px;
+      transition: .4s;
+      &#open-close-btn {
+        display: none;
+        &:hover {
+          background: none;
+          color: red;
+        }// open-close-btn:hover
+      }// open-close-btn
+      .fas {
+        margin: 0 15px 0 21px;
+      }// fas
+      &:hover {
+        color: map-get($colors-text, col-white);
+        background-color: map-get($colors-background, user-acc);
+      }// li:hover
+    }// li
+  }//  ul.category-list                                  
+}// sidebar-item
+
+.new-book {
+  height: 120px; 
+  justify-content: center; 
+  button {
+    width: 160px;
+    height: 44px;
+    border-radius: 4px;
+    background-color: map-get($colors-background, button);
+    outline: none;
+    border: none;
+    font-size: 14px;
+    color: map-get($colors-text, col-white);
+    font-weight: 900;
+    cursor: pointer;
+    span:first-child {
+      margin-right: 13px;
+    }// span:first-child
+  }// button     
+}// new-book
+
+.menu {
+  height: 240px;    
+}// .menu
+
+.list {
+  height: 181px;
+  ul {
+    li {
+      .circle {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: map-get($colors-marks, list-red);
+        margin: 0 15px 0 25px;         
+      }// .circle
+      &:nth-of-type(2) {
+        .circle {
+          background-color: map-get($colors-marks, list-orange);
+        }// .circle          
+      }// li:nth-of-type(2)
+      &:nth-of-type(3) {
+        .circle {
+          background-color: map-get($colors-marks, list-blue);
+        }// .circle          
+      }// li:nth-of-type(3)
+      &:nth-of-type(4) {
+        .circle {
+          background-color: map-get($colors-marks, list-purpule);
+        }// .circle          
+      }// li:nth-of-type(4)
+    }// li 
+  }// ul
+}// .list
+
+.add-books {
+  height: 347px;
+  ul {
+    li {
+      box-sizing: border-box;
+      height: auto;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding-right: 25px;
+      .fas {
+        width: 70px;
+        margin: 1em 0 0;
+        text-align: center;
+      }// .fas
+      p {
+        color: map-get($colors-text, p-col);
+        width: 105px;
+        font-size: 12px;
+        span.added-books {
+          color: map-get($colors-text, span-list);
+        }// mark.added-books
+      }// p
+      &:hover {
+        color: inherit;
+        background-color: inherit;
+      }// li:hover
+    }// li
+  }// ul
+}// add-books
+  
+.navbar {
+  @extend %flex-row-center-center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: map-get($colors-background, h1-bg);
+  height: 49px;
+  padding: 0 20px 0;
+  border-top: 1px solid map-get($colors-border, nav-bar);
+  border-bottom: 1px solid map-get($colors-border, nav-bar);
+  ul {    
+    @extend %flex-row-center-center;
+    li {
+      font-size: 12px;
+      margin: 0 5px 0;
+      padding: 5px 10px 5px;
+      border-radius: 9.5px;
+      color: map-get($colors-text, li-col);
+      transition: .3s;
+      &:hover,
+      &.active {
+        background-color: map-get($colors-background, li-hover);
+        color: map-get($colors-background, col-white);
+      }// li:hover, li.active
+    }// li
+  }// ul
+
+  .search-form { 
+    display: flex; 
+    flex-wrap: nowrap;                  
+    input,
+    button {
+      box-sizing: border-box;          
+      height: 30px;
+      border: 1px solid map-get($colors-border, button-border);          
+      font-size: 13px;
+      color: map-get($colors-text, li-col);
+      background-color: map-get($colors-background, col-white);
+      outline: none;
+    }// input, button
+    input {
+      width: 370px;
+      border-radius: 15.5px 0 0 15.5px;
+      border-right: none;
+      padding: 0 10px 0 19px;
+    }// input
+    button {
+      width: 30px;border-radius: 0 15.5px 15.5px 0;
+      border-left: none;margin-left: -5px;
+    }// button
+  }// search-form
+  .search-form-hidden {
+    display: none;
+  }// .search-form-hidden
+}// nav.navbar
+
+.books-container {
+  width: 100%;
+  padding: 29px 6px 0;
+  @extend %flex-row-center-center;
+  flex-wrap: wrap;
+  .books-conteiner-item {
+    width: 200px;
+    height: 380px;
+    margin: 0 10px 0;
+    box-sizing: border-box;
+    @include flex(column, flex-start, flex-start);
+    img {
+      width: 200px;
+      height: 275px;
+    }// img
+    h3 {
+      font-size: 16px;
+      color: map-get($colors-text, h3-col); 
+    }// h3
+    span {
+      font-size: 12px;
+      color: map-get($colors-text, span-item); 
+      margin-bottom: 8px;
+    }// span
+    .fas,
+    .fa-star {
+      color: map-get($colors-text, star-yellow); 
+    }// fas fa-star
+  }// books-conteiner-item
+}// .books-container
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+  .main-header {
+    .navbar {
+      padding: 0 5px 0;
+      .search-form {
+        transition: .4s; 
+        input {            
+          max-width: 150px;
+        }// input
+      }// .search-form
+    }// .navbar
+  }// .main-header   
+}// @media only screen and (max-width: 1100px)
+
+@media only screen and (max-width: 900px) {
+  $sideBarWidth: 60px; 
+  .sidebar {
+    transition: 0.3s;
+    .sidebar-item {
+      ul {
+        li {
+          width: $sideBarWidth;            
+          &#open-close-btn {
+            display: flex;            
+            .fa-angle-double-left {
+              display: none;
+            }// fa-angle-double-left
+          }// open-close-btn
+        }// li
+      }// ul
+    }// .sidebar-item
+    .new-book,
+    .list,
+    .add-books {
+      transition: 0.3s;
+      display: none;
+    }// .new-book, .list, .add-books
+    .add-books {
+      height: 317px;
+    }// .add-books
+    .menu {
+      height: 270px;
+      .mobile {
+        transition: 0.3s;
+        display: none;
+      }// .mobile
+    }// .menu
+  }// .sidebar 
+  .opened {
+    animation: sideBarOpen 0.3s;
+    .sidebar-item {
+      ul {
+        li {
+          width: 200px;
+          &#open-close-btn {
+            display: flex;
+            justify-content: flex-end;
+            &:hover {
+              background: none;
+              color: red;
+            }// open-close-btn:hover
+            .fa-angle-double-left {
+              display: block;
+            }// fa-angle-double-left
+            .fa-angle-double-right {
+              display: none;
+            }// fa-angle-double-left
+          }// open-close-btn
+        }// li
+      }// ul
+    }// .sidebar-item
+    .new-book,
+    .list,
+    .add-books {
+      display: flex;
+    }// .new-book, .list, .add-books      
+    .menu {
+      .mobile {
+        display: flex;
+      }// .mobile
+    }// .menu
+  }// .opened       
+}// @media only screen and (max-width: 900px)
+
+@media only screen and (max-width: 600px) {  
+  header {
+    ul {
+      li {
+        margin : 0 3px 0;
+        .circle {
+          display: none;
+        }// .circle
+      }// li
+      .user-account {
+        max-width: 60px;
+        img {
+          margin: 0 5px 0;
+        }// img
+        span {
+          display: none;
+        }// span
+      }// li.user-account
+    }// ul
+  }// header
+}// @media only screen and (max-width: 600px)
+@media only screen and (max-width: 600px) {
+  section.main-header {
+    nav.navbar {
+      .search-form {
+        display: none;
+      }// .search-form
+    }// nav.navbar
+  }// section.main-header   
+}// @media only screen and (max-width: 600px)
+
+
+@keyframes sideBarOpen {
+  from {width: 60px;
+  overflow: hidden;}
+  to {width: 200px;
+    overflow: visible;}
+}// @keyframes sideBarOpen
