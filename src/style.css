@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i");
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 11px 33px 52px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li:hover {
+  cursor: pointer;
+}
+
+ul li, header, header ul, header ul li .user-account, .sidebar .sidebar-item ul li, .main-header h1, .main-header nav.navbar, .main-header nav.navbar ul, .books-container, footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header {
+  width: 100%;
+  height: 45px;
+  background-color: #2f364a;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px 5px 0 0;
+  color: #78829d;
+}
+
+header span {
+  font-size: 12px;
+}
+
+header .logo {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: #e76847;
+  border-radius: 50%;
+  -webkit-box-shadow: 14px 0 0 0 #fabf00;
+          box-shadow: 14px 0 0 0 #fabf00;
+  margin: 0 35px 0 20px;
+}
+
+header .logo::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  -webkit-box-shadow: 28px 0 0 0 #52bea6;
+          box-shadow: 28px 0 0 0 #52bea6;
+}
+
+header ul li {
+  font-size: 13px;
+}
+
+header ul li .circle {
+  width: 4px;
+  height: 4px;
+  background-color: #19202e;
+  border-radius: 50%;
+  margin: 0 10px 0;
+}
+
+header ul li .user-account {
+  width: 158px;
+  height: 45px;
+  background-color: #15a4fa;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 0 5px 0 0;
+  margin-left: 10px;
+}
+
+header ul li .user-account img {
+  width: 31px;
+  height: 32px;
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header ul li .user-account span {
+  margin: 0 11px 0;
+}
+
+.sidebar {
+  max-width: 200px;
+  background-color: #181e2c;
+  color: #78829d;
+}
+
+.sidebar .sidebar-item {
+  background-color: #1f2637;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 4px;
+}
+
+.sidebar .sidebar-item ul li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 200px;
+  height: 38px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sidebar .sidebar-item ul li#open-close-btn {
+  display: none;
+}
+
+.sidebar .sidebar-item ul li#open-close-btn:hover {
+  background: none;
+  color: red;
+}
+
+.sidebar .sidebar-item ul li .fas {
+  margin: 0 15px 0 21px;
+}
+
+.sidebar .sidebar-item ul li:hover {
+  color: #fff;
+  background-color: #15a4fa;
+}
+
+.sidebar .new-book {
+  height: 120px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar .new-book button {
+  width: 160px;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #f2795a;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.sidebar .new-book button span:first-child {
+  margin-right: 13px;
+}
+
+.sidebar .menu {
+  height: 240px;
+}
+
+.sidebar .list {
+  height: 181px;
+}
+
+.sidebar .list ul li .circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #e64c66;
+  margin: 0 15px 0 25px;
+}
+
+.sidebar .list ul li:nth-of-type(2) .circle {
+  background-color: #ffab00;
+}
+
+.sidebar .list ul li:nth-of-type(3) .circle {
+  background-color: #00bfdd;
+}
+
+.sidebar .list ul li:nth-of-type(4) .circle {
+  background-color: #7874cf;
+}
+
+.sidebar .add-books {
+  height: 347px;
+}
+
+.sidebar .add-books ul li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-right: 25px;
+}
+
+.sidebar .add-books ul li .fas {
+  width: 70px;
+  margin: 1em 0 0;
+  text-align: center;
+}
+
+.sidebar .add-books ul li p {
+  color: #dbe3f0;
+  width: 105px;
+  font-size: 12px;
+}
+
+.sidebar .add-books ul li p span.added-books {
+  color: #97b3ce;
+}
+
+.sidebar .add-books ul li:hover {
+  color: inherit;
+  background-color: inherit;
+}
+
+.main-header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.main-header h1 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #eef1f7;
+  height: 70px;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 1px;
+  text-align: left;
+  color: #444c63;
+  padding-left: 23px;
+}
+
+.main-header nav.navbar {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #eef1f7;
+  height: 49px;
+  padding: 0 20px 0;
+  border-top: 1px solid #adafea;
+  border-bottom: 1px solid #adafea;
+}
+
+.main-header nav.navbar ul li {
+  font-size: 12px;
+  margin: 0 5px 0;
+  padding: 5px 10px 5px;
+  border-radius: 9.5px;
+  color: #8c97b2;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main-header nav.navbar ul li:hover, .main-header nav.navbar ul li.active {
+  background-color: #97b3ce;
+  color: #fff;
+}
+
+.main-header nav.navbar .search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.main-header nav.navbar .search-form input,
+.main-header nav.navbar .search-form button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 30px;
+  border: 1px solid rgba(140, 151, 178, 0.4);
+  font-size: 13px;
+  color: #8c97b2;
+  background-color: #fff;
+  outline: none;
+}
+
+.main-header nav.navbar .search-form input {
+  width: 370px;
+  border-radius: 15.5px 0 0 15.5px;
+  border-right: none;
+  padding: 0 10px 0 19px;
+}
+
+.main-header nav.navbar .search-form button {
+  width: 30px;
+  border-radius: 0 15.5px 15.5px 0;
+  border-left: none;
+  margin-left: -5px;
+}
+
+.main-header nav.navbar .search-form-hidden {
+  display: none;
+}
+
+.books-container {
+  width: 100%;
+  padding: 29px 6px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.books-container .books-conteiner-item {
+  width: 200px;
+  height: 380px;
+  margin: 0 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.books-container .books-conteiner-item img {
+  width: 200px;
+  height: 275px;
+}
+
+.books-container .books-conteiner-item h3 {
+  font-size: 16px;
+  color: #444c63;
+}
+
+.books-container .books-conteiner-item span {
+  font-size: 12px;
+  color: #6f7d95;
+  margin-bottom: 8px;
+}
+
+.books-container .books-conteiner-item .fas,
+.books-container .books-conteiner-item .fa-star {
+  color: #ffab00;
+}
+
+footer {
+  width: 100%;
+  height: 45px;
+  background-color: #181e2c;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer ul li {
+  color: #fff;
+  width: 55px;
+  height: 45px;
+  background-color: #1f2637;
+}
+
+footer ul li:last-child {
+  background-color: #15a4fa;
+  border-radius: 0 0 5px 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-header .navbar {
+    padding: 0 5px 0;
+  }
+  .main-header .navbar .search-form {
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .main-header .navbar .search-form input {
+    max-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sidebar {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .sidebar .sidebar-item ul li {
+    width: 60px;
+  }
+  .sidebar .sidebar-item ul li#open-close-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sidebar .sidebar-item ul li#open-close-btn .fa-angle-double-left {
+    display: none;
+  }
+  .sidebar .new-book,
+  .sidebar .list,
+  .sidebar .add-books {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    display: none;
+  }
+  .sidebar .add-books {
+    height: 317px;
+  }
+  .sidebar .menu {
+    height: 270px;
+  }
+  .sidebar .menu .mobile {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    display: none;
+  }
+  .opened {
+    -webkit-animation: sideBarOpen 0.3s;
+            animation: sideBarOpen 0.3s;
+  }
+  .opened .sidebar-item ul li {
+    width: 200px;
+  }
+  .opened .sidebar-item ul li#open-close-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .opened .sidebar-item ul li#open-close-btn:hover {
+    background: none;
+    color: red;
+  }
+  .opened .sidebar-item ul li#open-close-btn .fa-angle-double-left {
+    display: block;
+  }
+  .opened .sidebar-item ul li#open-close-btn .fa-angle-double-right {
+    display: none;
+  }
+  .opened .new-book,
+  .opened .list,
+  .opened .add-books {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .opened .menu .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header ul li {
+    margin: 0 3px 0;
+  }
+  header ul li .circle {
+    display: none;
+  }
+  header ul .user-account {
+    max-width: 60px;
+  }
+  header ul .user-account img {
+    margin: 0 5px 0;
+  }
+  header ul .user-account span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section.main-header nav.navbar .search-form {
+    display: none;
+  }
+}
+
+@-webkit-keyframes sideBarOpen {
+  from {
+    width: 60px;
+    overflow: hidden;
+  }
+  to {
+    width: 200px;
+    overflow: visible;
+  }
+}
+
+@keyframes sideBarOpen {
+  from {
+    width: 60px;
+    overflow: hidden;
+  }
+  to {
+    width: 200px;
+    overflow: visible;
+  }
+}
+/*# sourceMappingURL=style.css.map */

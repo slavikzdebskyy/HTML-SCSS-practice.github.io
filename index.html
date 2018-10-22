@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <span>
+      <i class="fas fa-book"></i>
+      MyBookApp
+    </span>
+    <ul>
+      <li>Help Center</li>
+      <li>        
+        <div class="circle"></div>     
+      </li>
+      <li>Our Support</li>
+      <li>
+        <div class="user-account">          
+          <img src="./src/img/avatar-01.jpg" alt="avatar">
+          <span>
+            John Doe
+          </span>
+          <i class="fas fa-chevron-circle-down"></i>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <nav class="sidebar" id="sidebar-menu">
+      <div class="sidebar-item new-book">
+        <button>
+          <span>+</span>
+          <span>ADD A BOOK</span>
+        </button>
+      </div><!-- sidebar new-book -->
+      <div class="sidebar-item menu">
+        <ul>
+          <li id="open-close-btn">
+              <i class="fas fa-angle-double-right"></i>
+              <i class="fas fa-angle-double-left"></i>
+          </li>
+          <li>
+              <i class="fas fa-book"></i>
+              <span class="mobile">Now-Reading</span> 
+          </li>
+          <li>
+            <i class="fas fa-globe-americas"></i>
+            <span class="mobile">Browse</span>
+          </li>
+          <li>
+            <i class="fas fa-shopping-cart"></i>
+            <span class="mobile">My Books</span>
+          </li>
+          <li>
+            <i class="fas fa-star"></i>
+            <span class="mobile">Favourite Books</span>
+          </li>
+          <li>
+            <i class="fas fa-th-list"></i>
+            <span class="mobile">Wishlist</span>
+          </li>
+          <li>
+              <i class="fas fa-clock"></i>
+              <span class="mobile">History</span>
+          </li>
+        </ul>
+      </div><!-- sidebar-item menu -->
+      <div class="sidebar-item list">
+        <ul>
+          <li>
+            <div class="circle"></div>
+            Must Read Titles          
+          </li>
+          <li>
+            <div class="circle"></div>
+            Best Of List
+          </li>
+          <li>
+            <div class="circle"></div>
+            Classic Novels
+          </li>
+          <li>
+            <div class="circle"></div>
+            Non Fiction
+          </li>
+        </ul>
+      </div><!-- sidebar-item list -->
+      <div class="sidebar-item add-books">
+        <ul>
+          <li>
+            <i class="fas fa-clock"></i>
+            <p>
+              You added <span class="added-books">Fight Club</span> by
+              <span class="added-books">Chuck Palahnik</span> to your
+              <span class="added-books">Must Read Titles</span> 
+            </p>
+            <p>24 minutes ago</p>
+          </li>
+          <li>
+            <i class="fas fa-clock"></i>
+            <p>
+              You added <span class="added-books">The Trial</span> by
+              <span class="added-books">Franz Kafka</span> to your
+              <span class="added-books">Must Read Titles</span> 
+            </p>
+            <p>24 minutes ago</p>
+          </li>
+        </ul>
+      </div> <!-- sidebar-item add-books -->
+    </nav>
+   
+    <section class="main-header">
+      <h1>
+        Browse Available Books
+      </h1>
+      <nav class="navbar">
+        <ul id="navbar-btn">
+          <li class="active">All Books</li>
+          <li>Most Recent</li>
+          <li>Most Popular</li>
+          <li>Free Books</li>
+        </ul>
+        <form action="#" class="search-form" id="srch-frm">
+            <input type="text" placeholder="Enter Keywords">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </nav>
+      <div class="books-container">
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-1.jpg" alt="book-cover">
+          <h3>Jewels of Nizam</h3>
+          <span>by Geeta Devi</span>
+          <div>
+            <i class="fas fa-star star-1"></i>
+            <i class="fas fa-star star-2"></i>
+            <i class="fas fa-star star-3"></i>
+            <i class="fas fa-star star-4"></i>
+            <i class="fas fa-star star-5"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-2.jpg" alt="book-cover">
+          <h3>Cakes & Bakes</h3>
+          <span>by Sanjeev Kapoor</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-3.jpg" alt="book-cover">
+          <h3>Jamie's Kitchen</h3>
+          <span>by Jamie Oliver</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-4.jpg" alt="book-cover">
+          <h3>Inexpensive Family Meals</h3>
+          <span>by Silmon Holst</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-5.jpg" alt="book-cover">
+          <h3>Paleo Slow Cooking</h3>
+          <span>by Chrissy Gower</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-6.jpg" alt="book-cover">
+          <h3>Cook Like an Italian</h3>
+          <span>by Tobie Puttock</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-7.jpg" alt="book-cover">
+          <h3>Suneeta Vaswani</h3>
+          <span>by Geeta Devi</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-8.png" alt="book-cover">
+          <h3>Jamie Does</h3>
+          <span>by Jamie Oliver</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-9.jpg" alt="book-cover">
+          <h3>Jamie's Italy</h3>
+          <span>by Jamie Oliver</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+        <div class="books-conteiner-item">
+          <img src="./src/img/book-cover-10.jpg" alt="book-cover">
+          <h3>Vegetables Cookbook</h3>
+          <span>by Matthew Biggs</span>
+          <div>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>  <!-- books-conteiner-item -->
+      </div>  <!-- books-container -->
+    </section>    
+  </main>
+  <footer>
+    <ul>
+      <li>
+        <i class="fas fa-question-circle"></i>
+      </li>
+      <li>
+        <i class="fas fa-cog"></i>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="src/main.js"></script>
+</body>
+</html>
